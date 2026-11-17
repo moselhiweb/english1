@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#081422">
+<title>اختبار بنك الأسئلة | Quiz Arena</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Manrope:wght@400;600;700;800&display=swap');
+:root{--bg:#081422;--panel:#101f31;--muted:#9cacc0;--text:#f4f7fb;--mint:#3be0b0;--blue:#62a8ff;--red:#ff647c;--gold:#ffcc68}*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 82% 8%,#12384a 0,transparent 36%),radial-gradient(ellipse at 10% 84%,#1d2450 0,transparent 33%),var(--bg);color:var(--text);font-family:Cairo,Arial,sans-serif;min-height:100vh}.wrap{max-width:1120px;margin:auto;padding:24px 22px 56px}.nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:48px}.brand{display:flex;gap:12px;align-items:center;font-weight:900}.brandicon{width:44px;height:44px;border-radius:15px;background:linear-gradient(140deg,#47e1b4,#398bff);display:grid;place-items:center;color:#092033;font-size:22px;box-shadow:0 9px 28px #22d4ad44}.pill{color:#c5d4e5;background:#15263a;border:1px solid #ffffff12;padding:8px 14px;border-radius:30px;font-size:13px}.hero{display:grid;grid-template-columns:1.2fr .8fr;gap:24px;align-items:center;margin-bottom:28px}.kicker{color:var(--mint);font-size:13px;font-weight:800;letter-spacing:.5px}.hero h1{font-size:clamp(34px,5vw,58px);line-height:1.17;margin:10px 0 16px;font-weight:900}.hero h1 span{background:linear-gradient(90deg,#54e3b9,#80b7ff);color:transparent;background-clip:text}.hero p{color:#afbdd0;line-height:1.9;max-width:600px;margin:0 0 22px}.stats{display:flex;gap:10px;flex-wrap:wrap}.stat{background:#13243a;border:1px solid #ffffff12;border-radius:14px;padding:10px 14px;font-size:13px;color:#bbc9da}.stat b{color:white;margin-inline-start:5px}.hero-art{min-height:250px;border-radius:28px;border:1px solid #ffffff16;background:linear-gradient(145deg,#122a3b,#15213b);position:relative;overflow:hidden;display:grid;place-items:center}.orb{position:absolute;width:190px;height:190px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#7df5d0,#32bba5 42%,#3880c0 73%,transparent 74%);filter:drop-shadow(0 0 50px #44deba55);animation:float 4s ease-in-out infinite}.orbit{position:absolute;width:260px;height:102px;border:1px solid #c1fff555;border-radius:50%;transform:rotate(-28deg);animation:spin 12s linear infinite}.orbit:after{content:'';position:absolute;top:4px;right:30px;width:13px;height:13px;background:#d5fff4;border-radius:50%;box-shadow:0 0 16px #58f4cf}.spark{position:absolute;color:#ffdc85;font-size:20px;animation:pulse 2s infinite}.spark.s1{top:29%;left:20%}.spark.s2{bottom:22%;right:21%;animation-delay:.8s}@keyframes float{50%{transform:translateY(-10px) scale(1.03)}}@keyframes spin{to{transform:rotate(332deg)}}@keyframes pulse{50%{opacity:.35;transform:scale(.8)}}.card{background:linear-gradient(145deg,#122338f2,#0f1c2cf2);border:1px solid #ffffff15;border-radius:24px;padding:28px;box-shadow:0 24px 70px #0003}.setup{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:end}.setup h2{grid-column:1/-1;margin:0;font-size:23px}.field label{display:block;color:#aebdd0;font-size:13px;margin-bottom:9px}.select{width:100%;background:#0b1827;color:white;border:1px solid #ffffff22;border-radius:13px;padding:14px;font:600 15px Cairo}.btn{border:0;border-radius:14px;padding:14px 22px;font:800 16px Cairo;cursor:pointer;color:#08202a;background:linear-gradient(100deg,#56e8bf,#7bb8ff);box-shadow:0 10px 24px #4bd6bb2b;transition:.2s}.btn:hover{transform:translateY(-2px);filter:brightness(1.07)}.setup .btn{width:100%}.note{grid-column:1/-1;color:#8193a9;font-size:12px;margin-top:-9px}.quiz{display:none}.qtop{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:20px}.progresslabel{font-size:14px;color:#bdcadb}.progresslabel b{color:white}.progress{height:8px;background:#1e3147;border-radius:20px;overflow:hidden;margin:10px 0 25px}.bar{height:100%;width:0;background:linear-gradient(90deg,#3ee2b2,#69a7ff);border-radius:20px;transition:width .5s}.qmeta{color:var(--mint);font:800 12px Manrope,sans-serif;letter-spacing:1px}.question{font:700 clamp(20px,3vw,27px)/1.55 Manrope,Cairo,sans-serif;direction:ltr;text-align:left;margin:0 0 22px;white-space:pre-wrap}.answers{display:grid;grid-template-columns:1fr 1fr;gap:12px;direction:ltr}.answer{background:#14263a;color:#eaf0f7;border:1px solid #ffffff13;border-radius:15px;text-align:left;padding:15px 16px;font:600 15px/1.55 Manrope,sans-serif;cursor:pointer;transition:.2s;display:flex;gap:12px;align-items:flex-start;min-height:60px}.answer:hover:not(:disabled){border-color:#65b4ff88;background:#19334b;transform:translateY(-2px)}.letter{width:26px;height:26px;flex:none;display:grid;place-items:center;border-radius:8px;background:#21374e;color:#93c5ff;font-weight:800;font-size:12px}.answer.correct{background:#10392f;border-color:#3be0b0;color:#b8ffe9;animation:pop .35s}.answer.wrong{background:#3b1d2a;border-color:#ff647c;color:#ffd2da;animation:shake .35s}.answer.reveal{box-shadow:0 0 0 2px #3be0b099 inset}.answer:disabled{cursor:default}@keyframes pop{50%{transform:scale(1.025)}}@keyframes shake{25%,75%{transform:translateX(5px)}50%{transform:translateX(-5px)}}.feedback{min-height:32px;margin:17px 0 7px;font-weight:800}.feedback.good{color:var(--mint)}.feedback.bad{color:#ff9aab}.feedback small{font-weight:600;color:#ccd6e4;margin-inline-start:8px}.qactions{display:flex;justify-content:space-between;align-items:center;margin-top:8px}.sound{border:1px solid #ffffff1e;background:#16283b;color:#d6e3f3;padding:10px 14px;border-radius:12px;font:700 13px Cairo;cursor:pointer}.result{display:none;text-align:center;padding:42px 25px}.medal{font-size:58px;animation:float 2s infinite}.result h2{font-size:36px;margin:4px 0}.result p{color:#adbdcf}.score{font:900 58px Manrope;color:var(--mint);margin:8px}.resultstats{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin:20px}.resultstats .stat{min-width:125px}.resultactions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}.secondary{color:#d9e7f5;background:#1b3047;border:1px solid #ffffff1b;box-shadow:none}.toast{position:fixed;bottom:25px;left:50%;transform:translate(-50%,20px);background:#172b40;padding:11px 17px;border-radius:30px;color:white;opacity:0;transition:.3s;pointer-events:none}.toast.show{opacity:1;transform:translate(-50%,0)}.confetti{position:fixed;top:-15px;width:9px;height:13px;z-index:5;animation:fall 2.8s linear forwards;pointer-events:none}@keyframes fall{to{transform:translateY(110vh) rotate(720deg);opacity:.2}}@media(max-width:700px){.wrap{padding:17px 14px 35px}.nav{margin-bottom:25px}.hero{grid-template-columns:1fr}.hero-art{min-height:190px;grid-row:1}.hero h1{font-size:38px}.setup{grid-template-columns:1fr}.setup h2,.note{grid-column:auto}.card{padding:20px}.answers{grid-template-columns:1fr}.qtop{align-items:flex-start}.question{font-size:20px}.result{padding:30px 10px}}
+</style></head><body><div class="wrap"><header class="nav"><div class="brand"><div class="brandicon">✦</div><div>Quiz Arena<br><small style="color:#8092a8;font-weight:600">اختبر نفسك بثقة</small></div></div><div class="pill">✧ بنك الأسئلة الكامل</div></header>
+<section class="hero" id="hero"><div><div class="kicker">LEARN · PRACTICE · ACHIEVE</div><h1>جاهز تتحدى<br><span>نفسك؟</span></h1><p>اختبر معلوماتك في بنك الأسئلة كاملًا. اختار إجابتك وشوف النتيجة فورًا — مع مؤثرات صوتية ومرئية لكل إجابة.</p><div class="stats"><div class="stat">📚 <b>144</b> سؤال</div><div class="stat">⚡ تصحيح فوري</div><div class="stat">🏆 نتيجتك في الآخر</div></div></div><div class="hero-art"><div class="orb"></div><div class="orbit"></div><div class="spark s1">✦</div><div class="spark s2">✧</div></div></section>
+<section class="card setup" id="setup"><h2>ابدأ اختبارك</h2><div class="field"><label for="count">عدد الأسئلة</label><select class="select" id="count"><option value="10">10 أسئلة · جولة سريعة</option><option value="20">20 سؤالًا · تركيز</option><option value="40">40 سؤالًا · تحدي</option><option value="all">كل الأسئلة · 144 سؤالًا</option></select></div><div class="field"><label for="order">ترتيب الأسئلة</label><select class="select" id="order"><option value="random">ترتيب عشوائي</option><option value="original">ترتيب الملف</option></select></div><div><button class="btn" id="start">ابدأ الاختبار&nbsp; ←</button></div><div class="field"><button class="sound" id="soundToggle">🔊 الصوت مفعّل</button></div><div class="note">تقدر تبدأ من أي جهاز. تقدمك محفوظ خلال الجولة الحالية فقط.</div></section>
+<section class="card quiz" id="quiz"><div class="qtop"><div class="progresslabel">السؤال <b id="qnum">1</b> من <b id="qtotal">10</b></div><button class="sound" id="quizSound">🔊 الصوت مفعّل</button></div><div class="progress"><div class="bar" id="bar"></div></div><div class="qmeta" id="qcat">QUESTION 01</div><h2 class="question" id="question"></h2><div class="answers" id="answers"></div><div class="feedback" id="feedback"></div><div class="qactions"><span class="progresslabel" id="liveScore">✅ 0 &nbsp; ❌ 0</span><button class="btn" id="next" style="display:none">السؤال التالي ←</button></div></section>
+<section class="card result" id="result"><div class="medal" id="medal">🏆</div><div class="kicker">انتهى الاختبار</div><h2 id="resultTitle">أحسنت!</h2><div class="score"><span id="score">0</span><small style="font-size:23px;color:#9db0c5"> / <span id="outOf">10</span></small></div><p id="resultText"></p><div class="resultstats"><div class="stat">✅ <b id="correctN">0</b> صحيحة</div><div class="stat">❌ <b id="wrongN">0</b> خاطئة</div><div class="stat">🎯 <b id="percent">0%</b> النسبة</div></div><div class="resultactions"><button class="btn" id="again">اختبار جديد ↻</button><button class="btn secondary" id="review">مراجعة الإجابات</button></div><div id="reviewList" style="display:none;text-align:left;direction:ltr;margin-top:28px"></div></section><div class="toast" id="toast"></div></div>
+<script>
+// Verified against the attached 14-page question bank. Answers use their printed option letters.
+const raw=`The person who decides which student can go to a university or college is …|chancellor|Course administrator|admission officer|Fresher|B
+I … pancakes on Saturdays and Sundays.|am eating|was eating|eaten|eat|D
+The baseball player’s malice toward the referee was revealed in his spiteful remarks to the media. “Spiteful” means…|vindictive|crazy|rude|unpleasant|A
+“In brief” is a phrase that should be included in the…|Argumentation|Body|Conclusion|Introduction|C
+Although Zachary is much too inexperienced for the managerial position, he is a willful young man and obdurately refuses to withdraw his application. “Obdurately” means…|foolishly|reluctantly|constantly|stubbornly|D
+His neighbor’s superficial remarks trivialized the property line dispute and infuriated Malcolm. What is the synonym of “superficial”?|enraged|petty|insulting|misleading|B
+“However” is a phrase that should be used in…|Consequence|Continuation|Contradiction|Simultaneity|C
+She showed a blatant disregard for the rules. What is the synonym for “blatant”?|obvious|hidden|last-minute|rebellious|A
+What does the idiom “run on fumes” mean?|to be happy|to be active|to be excited|to be exhausted|D
+What does the idiom “to sold me out” mean?|to keep my secret|to be loyal|to be honest|to let my secret out|D
+What does the idiom “it’s a no brainer” mean?|difficult decision|hard decision|tough decision|easy decision|D
+The captain often delegated responsibility to his subordinates, so as to have time to do the important tasks himself. “Delegated” means?|analyzed|respected|criticized|assigned|D
+A student in their first year at university or college is a…|chancellor|lecturer|course administrator|fresher|D
+The doctors were pleased that their theory had been fortified by the new research. “Fortified” means?|reinforced|altered|disputed|developed|A
+The general public didn’t care about the trial and was apathetic about the verdict. “Apathetic” means?|enraged|indifferent|suspicious|saddened|B
+Her fashion sense was usually described as flamboyant, but on the night of the party, Tanya’s outfit was uncharacteristically modest. What is the synonym of “flamboyant”?|impeccable|showy|sloppy|unassuming|B
+The editor of the newspaper needed to be sure the article presented the right information, so his review was meticulous. “Meticulous” means?|delicate|painstaking|superficial|objective|B
+The neighborhood-watch group presented its ultimatum at the town board meeting: Repave the streets or prepare for protests. “Ultimatum” means?|earnest plea|formal petition|solemn promise|non-negotiable demand|D
+He based his conclusion on what he inferred from the evidence, not on what he actually observed. “Inferred” means?|predicted|imagined|surmised|implied|C
+The suspect gave a plausible explanation for his presence at the scene, so the police decided to look elsewhere for the perpetrator of the crime. “Plausible” means?|unbelievable|credible|insufficient|apologetic|B
+The attorney wanted to expedite the process because her client was becoming impatient. “Expedite” means?|accelerate|evaluate|reverse|justify|A
+That perfume always evokes pleasant memories. “Evokes” means?|angers|erases|calls up|confuses|C
+Since the townspeople were so dissatisfied, various methods to alleviate the situation were debated. “Alleviate” means?|ease|tolerate|clarify|intensify|A
+A talk, usually at university or college, to teach a large group of students is a…|lecture|tuition|term|campus|A
+The teacher used a euphemism for an unpleasant subject. “Euphemism” means?|ugly picture|substituted word|homeless person|visual aid|B
+As soon as the details of the election were released to the media, the newspaper was inundated with calls—far too many to be handled effectively. “Inundated” means?|provided|bothered|rewarded|flooded|D
+After several small brushfires at the campground, officials felt the need to augment the rules pertaining to campfires. “Augment” means?|criticize|retract|consider|expand|D
+Mr. Powers was so gullible that he believed even the most outlandish excuses of his insincere employees. What is the meaning of “gullible”?|intelligent|naïve|dishonest|critical|B
+You cannot become a certified teacher without completing the prerequisite student-teaching assignment. What is the meaning of “prerequisite”?|required|optional|preferred|advisable|A
+Charles, aware of his susceptibility to gum disease, is diligent about flossing. What’s meant by “diligent”?|uncomfortable|excited|thorough|ambivalent|C
+“Don’t feel blue, every cloud has a silver lining”. The speaker means…|it is going to rain|the clouds look good|it is going to be dark|things will get better|D
+Even though she’d read her supervisor’s memo four or five times, she still found his rambling message ambiguous. What is the meaning of “ambiguous”?|profound|inspiring|ridiculous|unclear|D
+Excited about winning the award, Marcia walked up to the podium and delivered an animated acceptance speech.|abbreviated|courteous|reserved|lively|D
+The intermittent rain soaked the garden many different times during the day. What is meant by “intermittent”?|protracted|periodic|incredulous|light|B
+A period of time at a school or university; there are usually three of these. It is a…|lecture|tuition|term|campus|C
+I got a vicarious thrill watching you on the diving board. What is the meaning of “vicarious”?|shared|unpleasant|adventurous|evil|A
+After several small brushfires at the campground, officials felt the need to augment the rules pertaining to campfires. What is the meaning of “augment”?|criticize|retract|consider|expand|D
+As soon as the details of the election were released to the media, the newspaper was inundated with calls—far too many to be handled effectively. What is the meaning of “inundated”?|provided|bothered|rewarded|flooded|D
+The doctor got to the crux of the issue. The meaning of “crux” is?|outline|opposite|crucial point|unhealthy|C
+When people heard that timid Bob had taken up skydiving, they were incredulous. What is the meaning of “incredulous”?|fearful|outraged|convinced|disbelieving|D
+The technical department enthusiastically hired Ms. Long because she was proficient in the use of computers. What is the meaning of “proficient”?|sincere|adequate|competent|skilled|C
+“Because of this” is a phrase that should be used in…|Consequence|Continuation|Contradiction|Simultaneity|A
+“I don’t believe most of what Adrian says, he’s full of hot air”. The speaker means that Adrian is…|sincere|persuasive|bluffing|honest|C
+“I always wanted to visit Italy before I kick the bucket”. Kick the bucket means…|to spill the water|to travel|to die|to survive|C
+“Finally” is a phrase that should be included in the…|Argumentation|Body|Conclusion|Introduction|C
+The area that contains the main buildings of a university. It is the…|lecture|tuition|campus|club|C
+The technical department enthusiastically hired Ms. Long because she was proficient in the use of computers. What is the meaning of “proficient”?|adequate|competent|sincere|skilled|B
+When people heard that timid Bob had taken up skydiving, they were incredulous. What is the meaning of “incredulous”?|convinced|disbelieving|fearful|outraged|B
+“In conclusion” is a phrase that should be included in the…|Argumentation|Body|Conclusion|Introduction|C
+The head of the university is a…|lecture|tuition|term|chancellor|D
+I will settle into a new house. What is the antonym of “settle into”?|move out|stay|live|survive|A
+My schedule is not organized yet and I need to sort it out. The synonym of “sort out” is…|mix up|figure out|mingle|tangle|B
+The person who organizes the courses and does the office work is…|Admission officer|Course administrator|Chancellor|Fresher|A
+To become a student in a course is to…|withdraw|enroll|graduate|exchange|B
+To put your name on an official list is to…|withdraw|enroll|graduate|register|D
+“I’m all ears for your story”; the speaker means he is…|attentive|not listening carefully|having big ears|inattentive|A
+The area that contains the main buildings of a university is…|term|campus|club|school|B
+“Lastly” is a phrase that should be used in…|Continuation|Contradiction|Ordering|Simultaneity|C
+“I always wanted to visit Italy before I kick the bucket”. Kick the bucket means…|to spill the water|to travel|to die|to survive|C
+“Firstly” is a phrase that should be used in…|Continuation|Ordering|Simultaneity|Contradiction|B
+They called her a swot because she was always the top of her class. This idiom means…|Someone who reads a lot|A student who is ridiculed for studying excessively|To learn how to do a job|To be a diligent worker|B
+“Therefore” is a phrase that should be used in…|Consequence|Continuation|Contradiction|Simultaneity|A
+A period of time at a school or university; there are usually three of these. It is a…|lecture|tuition|term|campus|C
+“As is observed” is a phrase that should be included in the…|Argumentation|Body|Conclusion|Introduction|B
+“Then” is a phrase that should be used in…|Continuation|Ordering|Simultaneity|Contradiction|A
+I never knew that she was married. Oh well, you live and learn. This idiom means…|To learn something in such a way that you can say it from memory|To learn how to do a job|Said when you hear or discover something surprising|To make a lifelong commitment|C
+“Overall” is a phrase that should be included in the…|Argumentation|Body|Conclusion|Introduction|C
+“Moreover” is a phrase that should be used in…|Continuation|Contradiction|Ordering|Simultaneity|A
+Mr. Powers was so gullible that he believed even the most outlandish excuses of his insincere employees. What is the meaning of “gullible”?|intelligent|naïve|dishonest|critical|B
+You cannot become a certified teacher without completing the prerequisite student-teaching assignment. What is the meaning of “prerequisite”?|required|optional|preferred|advisable|A
+Even though she’d read her supervisor’s memo four or five times, she still found his rambling message ambiguous. What is the meaning of “ambiguous”?|profound|inspiring|ridiculous|unclear|D
+Excited about winning the award, Marcia walked up to the podium and delivered an animated acceptance speech.|abbreviated|courteous|reserved|lively|D
+The intermittent rain soaked the garden many different times during the day. What is meant by “intermittent”?|protracted|periodic|incredulous|light|B
+I got a vicarious thrill watching you on the diving board. What is the meaning of “vicarious”?|shared|unpleasant|adventurous|evil|A
+After several small brushfires at the campground, officials felt the need to augment the rules pertaining to campfires. What is the meaning of “augment”?|criticize|retract|consider|expand|D
+As soon as the details of the election were released to the media, the newspaper was inundated with calls—far too many to be handled effectively. What is the meaning of “inundated”?|provided|bothered|rewarded|flooded|D
+I learnt all the vocabulary off by heart. This idiom means…|To learn something in such a way that you can say it from memory|To learn how to do a job|Said when you hear or discover something surprising|To memorize quickly|A
+“As a general trend” is a phrase that should be included in the…|Argumentation|Body|Conclusion|Introduction|B
+“On the other hand” is a phrase that should be used in…|Continuation|Consequence|Contradiction|Simultaneity|D
+When people heard that timid Bob had taken up skydiving, they were incredulous. What is the meaning of “incredulous”?|fearful|outraged|convinced|disbelieving|D
+The technical department enthusiastically hired Ms. Long because she was proficient in the use of computers. What is the meaning of “proficient”?|sincere|adequate|competent|skilled|C
+One of the rules you should keep in mind during writing is to…|Avoid repetition|ignore punctuation|Repeat words|use personal pronouns|A
+We … T.V at the moment.|are watching|was watching|is watching|watch|A
+“In addition to” is a phrase that should be used in…|Continuation|Contradiction|Ordering|Simultaneity|A
+Do you … to school on time every morning?|getting|got|get|have got|C
+“Notwithstanding” is a phrase that should be used in…|Continuation|Contradiction|Ordering|Simultaneity|B
+“Thus” is a phrase that should be used in…|Consequence|Continuation|Contradiction|Simultaneity|A
+She is new here and is still learning the ropes. This idiom means…|To learn something in such a way that you can say it from memory|To learn how to do a job|Said when you hear or discover something surprising|To gain experience|B
+“As can be seen” is a phrase that should be included in the…|Argumentation|Body|Conclusion|Introduction|B
+“Cooking dinner was a piece of cake”, the speaker meant cooking was…|delicious|effortless|difficult|complicated|B
+“Furthermore” is a phrase that should be used in…|Continuation|Contradiction|Ordering|Simultaneity|A
+“To sum up” is a phrase that should be included in the…|Argumentation|Body|Conclusion|Introduction|C
+When a trend remains constant, it means it is…|Declining|Dropping|Slumping|stable|D
+A period of time at a school or university; there are usually three of these. It is a…|lecture|tuition|term|campus|C
+Students who live far away from their universities spend a lot of money on accommodation. What is the synonym of “accommodation”?|courses|residence|campus|tuition|B
+The whole university’s experience is worthwhile. The synonym of the adjective “worthwhile” is…|cheap|valuable|reasonable|worthless|B
+The figure which has lines is named…|Bar chart|Pie chart|Table|Line graph|D
+The figure which has columns is named…|Bar chart|Pie chart|Table|Line graph|C
+They called her a swot because she was always the top of her class. This idiom means…|Someone who reads a lot|A student who is ridiculed for studying excessively|To learn how to do a job|To be a diligent worker|B
+The figure which has rows is named…|Bar chart|Pie chart|Table|Line graph|C
+The figure which has segments or sections is named…|Bar chart|Pie chart|Table|Line graph|B
+When a trend is changing between ups and downs, it is…|Increasing|Leveling off|Slumping|Fluctuating|D
+When a trend is increasing, it is…|Up soaring|Leveling off|Slumping|Fluctuating|A
+When a trend is decreasing, it is…|Declining|Leveling off|Slumping|Fluctuating|A
+When a trend reaches the top, it means it arrives at the…|Ground|Peak|Bottom|Level|B
+I will settle into a new house. What is the antonym of “settle into”?|Move out|Stay|Live|Survive|A
+The first rule when writing task 1 in IELTS test is to write not less than…|150 words|250 words|350 words|450 words|A
+The first component in task 1 in writing in IELTS test should be a/an…|Question|Introduction|Body|Conclusion|B
+The second component in task 1 in writing in IELTS test should be a/an…|Question|Introduction|Body|Conclusion|C
+He’s always reading. He’s a real bookworm. This idiom means…|Someone who reads a lot|A student who is ridiculed for studying excessively|To learn how to do a job|To be a diligent worker|A
+The third component in task 1 in writing in IELTS test should be a/an…|Question|Introduction|Body|Conclusion|D
+An introduction in task 1 in writing in IELTS test should have … components.|6|5|4|3|D
+The first component should be included in the introduction in task 1 in IELTS test is…|Major trend|Purpose|Location|Date|B
+The second component should be included in the introduction in task 1 in IELTS test is…|Major trend|Purpose|Location|Date|C
+The third component should be included in the introduction in task 1 in IELTS test is…|Major trend|Purpose|Location|Date|D
+My schedule is not organized yet and I need to sort it out. The synonym of “sort out” is…|mix up|figure out|mingle|tangle|B
+The first component should be included in the body in task 1 in writing test is the…|General trend|Conclusion|Minor trends|Purpose|A
+The second component should be included in the body in task 1 in writing test is/are the…|General trend|Conclusion|Minor trends|Purpose|C
+The conclusion of task 1 in writing in IELTS test should give the reader a/an…|Argumentation|Persuasion|Interrogation|Summarization|D
+“The table shows the comparison of…” is a phrase that should be included in the…|Introduction|Body|Conclusion|Argumentation|A
+She … English every day.|is studying|was studying|studies|studied|C
+“As is presented” is a phrase that should be included in the…|Introduction|Body|Introduction|Argumentation|B
+“As a general trend” is a phrase that should be included in the…|Argumentation|Body|Conclusion|Argumentation|B
+“To sum up” is a phrase that should be included in the…|Introduction|Body|Conclusion|Argumentation|C
+“I’m sitting on the fence and watching the political scene from afar.” The speaker means he is…|biased|attentive|neutral|careful|C
+The designer’s window treatments in her house, installed 17 years ago, were outmoded. “Outmoded” means…|unnecessary|out-of-date|foreign|illegal|B
+“Accordingly” is a phrase that should be used in…|Consequence|Continuation|Contradiction|Simultaneity|A
+“In conclusion” is a phrase that should be included in the…|Introduction|Body|Conclusion|Argumentation|C
+“Firstly” is a phrase that should be used in…|Continuation|Ordering|Simultaneity|Contradiction|B
+“Secondly” is a phrase that should be used in…|Continuation|Ordering|Simultaneity|Contradiction|B
+“Moreover” is a phrase that should be used in…|Continuation|Contradiction|Ordering|Simultaneity|A
+I … my homework right now.|do|does|am doing|was doing|C
+“In addition to” is a phrase that should be used in…|Continuation|Ordering|Simultaneity|Contradiction|A
+The spies conducted a covert operation. “Covert” means…|dangerous|hidden|foreign|illegal|B
+“Then” is a phrase that should be used in…|Continuation|Ordering|Simultaneity|Contradiction|A
+“Because of this” is a phrase that should be used in…|Continuation|Consequence|Simultaneity|Contradiction|B
+“Therefore” is a phrase that should be used in…|Continuation|Consequence|Simultaneity|Contradiction|B
+“Thus” is a phrase that should be used in…|Continuation|Consequence|Simultaneity|Contradiction|B
+“Accordingly” is a phrase that should be used in…|Continuation|Consequence|Simultaneity|Contradiction|B
+“On the other hand” is a phrase that should be used in…|Continuation|Consequence|Simultaneity|Contradiction|D
+“Notwithstanding” is a phrase that should be used in…|Continuation|Consequence|Simultaneity|Contradiction|D
+“Nevertheless” is a phrase that should be used in…|Continuation|Consequence|Simultaneity|Contradiction|D
+You should use bullets while writing a paragraph. This sentence is…|true|false|||B
+(Earth’s climate fluctuates between warm periods and cold periods.) The word “fluctuate” means: To change often, from one condition to another?|false|true|||B`;
+const questions=raw.split('\n').map(line=>{let p=line.split('|');return {q:p[0],o:p.slice(1,5),a:'ABCD'.indexOf(p[5])}});
+let order=[],pos=0,correct=0,wrong=0,locked=false,soundOn=true,audioCtx,userAnswers=[];
+const $=s=>document.querySelector(s),setup=$('#setup'),quiz=$('#quiz'),result=$('#result');
+function toast(t){let e=$('#toast');e.textContent=t;e.classList.add('show');setTimeout(()=>e.classList.remove('show'),1800)}
+function playTone(ok){if(!soundOn)return;try{audioCtx=audioCtx||new(window.AudioContext||window.webkitAudioContext)();audioCtx.resume();let now=audioCtx.currentTime;let osc=audioCtx.createOscillator(),gain=audioCtx.createGain();osc.connect(gain);gain.connect(audioCtx.destination);gain.gain.setValueAtTime(.0001,now);gain.gain.exponentialRampToValueAtTime(ok?.36:.30,now+.025);gain.gain.exponentialRampToValueAtTime(.0001,now+(ok?.72:.52));if(ok){osc.type='sine';osc.frequency.setValueAtTime(660,now);osc.frequency.setValueAtTime(880,now+.14);osc.frequency.setValueAtTime(1175,now+.31)}else{osc.type='triangle';osc.frequency.setValueAtTime(260,now);osc.frequency.exponentialRampToValueAtTime(125,now+.38)}osc.start(now);osc.stop(now+.75)}catch(e){}}
+function toggleSound(){soundOn=!soundOn;$('#soundToggle').textContent=$('#quizSound').textContent=soundOn?'🔊 الصوت مفعّل':'🔇 الصوت مغلق'}$('#soundToggle').onclick=toggleSound;$('#quizSound').onclick=toggleSound;
+function start(){let n=$('#count').value==='all'?questions.length:+$('#count').value;order=Array.from({length:questions.length},(_,i)=>i);if($('#order').value==='random')order.sort(()=>Math.random()-.5);order=order.slice(0,n);userAnswers=Array(order.length).fill(null);pos=correct=wrong=0;$('#hero').style.display='none';setup.style.display='none';result.style.display='none';quiz.style.display='block';render()}
+function render(){locked=false;let item=questions[order[pos]];$('#qnum').textContent=pos+1;$('#qtotal').textContent=order.length;$('#qcat').textContent='QUESTION '+String(pos+1).padStart(2,'0');$('#question').textContent=item.q;$('#bar').style.width=(pos/order.length*100)+'%';$('#feedback').textContent='';$('#feedback').className='feedback';$('#next').style.display='none';$('#liveScore').textContent='✅ '+correct+'　❌ '+wrong;let box=$('#answers');box.innerHTML='';item.o.forEach((v,i)=>{let b=document.createElement('button');b.className='answer';b.innerHTML='<span class="letter">'+('ABCD'[i])+'</span><span>'+escapeHTML(v||'—')+'</span>';b.onclick=()=>choose(i);box.appendChild(b)})}
+function escapeHTML(s){return s.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function choose(i){if(locked)return;locked=true;userAnswers[pos]=i;let item=questions[order[pos]],buttons=[...document.querySelectorAll('.answer')],ok=i===item.a;buttons.forEach((b,j)=>{b.disabled=true;if(j===item.a)b.classList.add(ok?'correct':'reveal')});if(ok){correct++;buttons[i].classList.add('correct');$('#feedback').textContent='إجابة صحيحة! ممتاز 👏';$('#feedback').className='feedback good'}else{wrong++;buttons[i].classList.add('wrong');$('#feedback').innerHTML='إجابة غلط <small>الإجابة الصحيحة: '+('ABCD'[item.a])+'. '+escapeHTML(item.o[item.a])+'</small>';$('#feedback').className='feedback bad'}playTone(ok);$('#liveScore').textContent='✅ '+correct+'　❌ '+wrong;$('#next').textContent=pos===order.length-1?'عرض النتيجة 🏆':'السؤال التالي ←';$('#next').style.display='inline-block';$('#bar').style.width=((pos+1)/order.length*100)+'%'}
+$('#next').onclick=()=>{pos++;if(pos<order.length)render();else finish()};
+function finish(){quiz.style.display='none';result.style.display='block';$('#score').textContent=correct;$('#outOf').textContent=order.length;$('#correctN').textContent=correct;$('#wrongN').textContent=wrong;let pc=Math.round(correct/order.length*100);$('#percent').textContent=pc+'%';$('#medal').textContent=pc>=85?'🏆':pc>=60?'🥇':'💪';$('#resultTitle').textContent=pc>=85?'أداء رائع!':pc>=60?'شغل ممتاز!':'كمل تدريبك!';$('#resultText').textContent=pc>=85?'مستواك ممتاز — استمر على نفس القوة!':pc>=60?'نتيجة حلوة، ومع شوية مراجعة هتكون أقوى.':'كل محاولة بتقربك من الإتقان. جرّب تاني!';confetti(pc>=60);}
+function confetti(on){if(!on)return;let colors=['#3be0b0','#62a8ff','#ffcc68','#ff647c','#d4a6ff'];for(let i=0;i<55;i++){let e=document.createElement('i');e.className='confetti';e.style.left=Math.random()*100+'vw';e.style.background=colors[i%colors.length];e.style.animationDelay=Math.random()*.8+'s';e.style.transform='rotate('+Math.random()*360+'deg)';document.body.appendChild(e);setTimeout(()=>e.remove(),3500)}}
+$('#start').onclick=start;$('#again').onclick=()=>{result.style.display='none';$('#hero').style.display='grid';setup.style.display='grid';$('#reviewList').style.display='none';window.scrollTo({top:0,behavior:'smooth'})};
+$('#review').onclick=()=>{let el=$('#reviewList');el.style.display=el.style.display==='none'?'block':'none';el.innerHTML=order.map((idx,i)=>{let q=questions[idx],picked=userAnswers[i],ok=picked===q.a;return '<div style="padding:14px;margin:9px 0;background:#0b1927;border-radius:12px;border-inline-start:3px solid '+(ok?'#3be0b0':'#ff647c')+'"><b>Q'+(i+1)+'. '+escapeHTML(q.q)+'</b><div style="color:#8fa4bc;margin-top:5px">Your answer: '+escapeHTML(picked===null?'—':('ABCD'[picked])+'. '+q.o[picked])+' · Correct: '+('ABCD'[q.a])+'. '+escapeHTML(q.o[q.a])+'</div></div>'}).join('');};
+document.addEventListener('keydown',e=>{if(quiz.style.display==='block'&&!locked&&'abcd'.includes(e.key.toLowerCase()))choose('abcd'.indexOf(e.key.toLowerCase()));if(quiz.style.display==='block'&&locked&&e.key==='Enter')$('#next').click()});
+if(questions.length!==144){console.warn('Question count mismatch',questions.length);$('.pill').textContent='بنك الأسئلة · '+questions.length+' سؤال'}
+</script></body></html>
